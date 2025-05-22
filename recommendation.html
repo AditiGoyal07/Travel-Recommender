@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Recommendation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('templates/travel.jpg'); /* Replace with the path or URL to your background image */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1, h2, p {
+            color: #333;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Style recommendation details */
+        h2 {
+            color: #007BFF;
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        strong {
+            color: #333;
+        }
+
+        /* Back to Home button */
+        .back-to-home {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-to-home a {
+            color: #007BFF;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-to-home a:hover {
+            background-color: #007BFF;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Travel Recommendation System</h1>
+
+        <!-- Display recommendation details -->
+        <h2>{{ recommendation['Destination'] }}</h2>
+        <p><strong>Ratings:</strong> {{ recommendation['Ratings'] }}</p>
+        <p><strong>Tags:</strong> {{ recommendation['Tags'] }}</p>
+        <p><strong>Description:</strong> {{ recommendation['Description'] }}</p>
+        <p><strong>Accommodation:</strong> {{ recommendation['Accommodation'] }}</p>
+        <p><strong>Shopping:</strong> {{ recommendation['Shopping'] }}</p>
+        <p><strong>Transportation:</strong> {{ recommendation['Transportation'] }}</p>
+        <p><strong>Adventure Level:</strong> {{ recommendation['AdventureLevel'] }}</p>
+        <p><strong>Cuisine:</strong> {{ recommendation['Cuisine'] }}</p>
+        <p><strong>Tourist Attractions:</strong> {{ recommendation['Tourist_Attraction_1'] }}, {{ recommendation['Tourist_Attraction_2'] }}, {{ recommendation['Tourist_Attraction_3'] }}</p>
+        <p><strong>Spiritual:</strong> {{ recommendation['Spiritual'] }}</p>
+        <p><strong>Nature:</strong> {{ recommendation['Nature'] }}</p>
+        <p><strong>Crowded:</strong> {{ recommendation['Crowded'] }}</p>
+        <p><strong>Nightlife:</strong> {{ recommendation['Nightlife'] }}</p>
+        <p><strong>Average Budget:</strong> {{ recommendation['Average Budget'] }}</p>
+        <p><strong>Location:</strong> Latitude {{ recommendation['Latitude'] }}, Longitude {{ recommendation['Longitude'] }}</p>
+
+        <!-- Back to Home button -->
+        <div class="back-to-home">
+            <a href="/">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
